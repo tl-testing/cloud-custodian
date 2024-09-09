@@ -13,13 +13,13 @@ defaults:
     working-directory: policies/cloudtrail/
 
 env:
-  AWS_ACCOUNT_ID: "123456789012"
+#   AWS_ACCOUNT_ID: "123456789012"
   REGION_LIST: |
     (
     "us-east-1"
     "ap-southeast-1"
     )
-  ROLE_NAME: custodian-sample-role
+#   ROLE_NAME: arn:aws:iam::311383872388:role/c7n-role
 
 jobs:
   CustodianDeployer:
@@ -45,16 +45,16 @@ jobs:
           python3 -m pip install --upgrade pip
           pip3 install c7n
 
-      - name: Install 1Password CLI
-        uses: 1password/install-cli-action@v1
+    #   - name: Install 1Password CLI
+    #     uses: 1password/install-cli-action@v1
 
-      - name: "Load secrets from 1Password"
-        uses: 1password/load-secrets-action@v1.3.1
-        with:
-          export-env: true
-        env:
-          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          GH_APP_ID: "op://TLAutomations/GH_OKTA_SYNC_APP_PEM/github_app_id"
+    #   - name: "Load secrets from 1Password"
+    #     uses: 1password/load-secrets-action@v1.3.1
+    #     with:
+    #       export-env: true
+    #     env:
+    #       OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+    #       GH_APP_ID: "op://TLAutomations/GH_OKTA_SYNC_APP_PEM/github_app_id"
 
       - name: '"Configure AWS Credentials" Action for GitHub Actions'
         uses: aws-actions/configure-aws-credentials@v4.0.2
