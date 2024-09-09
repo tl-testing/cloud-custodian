@@ -49,8 +49,8 @@ policies:
                     "short": `true`
                   }
                 ],
-                "footer": `Powered By CldCvr DevSecOps`,
-                "footer_icon": `https://a.cldcvr.com/cldcvr/favicons/64px.png`
+                "footer": `Powered By TripleLift Security`,
+                "footer_icon": `https://triplelift.com/wp-content/themes/genesis-triplelift/images/logomark-gradient.svg`
               }
             ]
           }
