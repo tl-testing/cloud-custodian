@@ -23,7 +23,7 @@ env:
 
 jobs:
   CustodianDeployer:
-    name: Deploy Lambda for CloudTrail Events
+    name: CloudCustodian Test Run
 
     runs-on: ubuntu-latest
 
