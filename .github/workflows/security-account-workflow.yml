@@ -1,10 +1,10 @@
 name: CloudCustodian Test Run
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - policies/**
+#   push:
+#     branches:
+#       - main
+#     paths:
+#       - policies/**
   workflow_dispatch:
 
 defaults:
